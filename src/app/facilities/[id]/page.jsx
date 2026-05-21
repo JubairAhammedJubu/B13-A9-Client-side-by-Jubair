@@ -44,7 +44,7 @@ const FacilityDetailsPage = async ({params}) => {
       <div className="relative rounded-3xl overflow-hidden shadow-lg">
         <Image
           src={imageUrl}
-          alt={name}
+          alt={"image"}
           width={1200}
           height={500}
           className="w-full h-[420px] object-cover"

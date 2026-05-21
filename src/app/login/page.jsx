@@ -14,6 +14,7 @@ import {authClient} from "@/lib/auth-client";
 import {redirect} from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const onSubmit = async (e) => {
@@ -28,18 +29,28 @@ const LoginPage = () => {
     });
 
     if (data) {
-      redirect("/");
+      toast.success("Account created successfully!");
+
+      setTimeout(() => {
+        redirect("/");
+      }, 1500);
     }
 
     if (error) {
-      alert("Error");
+      toast.error(error.message || "Something went wrong");
     }
   };
 
   const handleGoogleSignin = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+      });
+
+      toast.success("Google sign in successful!");
+    } catch (error) {
+      toast.error("Google sign in failed");
+    }
   };
 
   return (

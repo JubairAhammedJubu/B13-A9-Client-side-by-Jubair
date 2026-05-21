@@ -13,6 +13,7 @@ import {
   Button,
   Card,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 
 const AddFacilityPage = () => {
   
@@ -56,10 +57,9 @@ const AddFacilityPage = () => {
     const result = await res.json();
 
     if (result.insertedId) {
-      alert("Facility Added Successfully");
+      toast.success("Facility Added Successfully");
     }
     router.push("/facilities");
-
   };
 
   return (
@@ -295,7 +295,7 @@ const AddFacilityPage = () => {
           <Button
             type="submit"
             variant="outline"
-            className=" rounded-none w-full bg-cyan-500 text-white"
+            className=" rounded-2xl w-full bg-cyan-500 text-white"
           >
             Add Facility
           </Button>

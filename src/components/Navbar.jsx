@@ -20,7 +20,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     await authClient.signOut();
     setProfileOpen(false);
-    router.push("/login")
+    router.refresh()
   };
 
   // Close dropdowns when clicking outside

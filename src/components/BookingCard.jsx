@@ -171,10 +171,6 @@ export default function BookingCard({ facility }) {
 
             {/* FOOTER */}
             <Modal.Footer>
-              <Button slot="close" variant="secondary">
-                Cancel
-              </Button>
-
               <Button
                 onClick={handleBooking}
                 isLoading={loading}

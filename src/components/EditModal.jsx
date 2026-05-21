@@ -14,6 +14,7 @@ import {
   Select,
 } from "@heroui/react";
 import {BiEdit} from "react-icons/bi";
+import toast from "react-hot-toast";
 
 export function EditModal({facility}) {
   const {
@@ -49,7 +50,13 @@ export function EditModal({facility}) {
     );
 
     const data = await res.json();
-    router.push("/manage-facilities");
+    if (res.ok) {
+      toast.success("Updated Successfully");
+      router.push("/manage-facilities");
+    } else {
+      toast.error("Update Failed");
+    }
+
     console.log(data);
   };
 

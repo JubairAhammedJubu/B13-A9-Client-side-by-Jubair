@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import { TrashBin } from "@gravity-ui/icons";
 import { AlertDialog, Button } from "@heroui/react";
+import toast from "react-hot-toast";
 
 export function BookingCancelAlert({bookingId}) {
 
@@ -20,8 +21,14 @@ export function BookingCancelAlert({bookingId}) {
 
         const data = await res.json();
 
-        window.location.reload();
+        if (res.ok) {
+          toast.success("Booking Cancelled");
+          window.location.reload();
+        } else {
+          toast.error("Cancel Failed");
+        }
 
+        console.log(data);
         
     }
 
@@ -29,7 +36,7 @@ export function BookingCancelAlert({bookingId}) {
   return (
     <AlertDialog>
       <Button
-        className={" rounded-none border-red-500 text-red-500"}
+        className={" rounded-2xl border-red-500 text-red-500"}
         variant="outline"
       >
         <TrashBin /> Cancel

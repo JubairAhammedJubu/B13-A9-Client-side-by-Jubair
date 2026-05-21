@@ -2,24 +2,37 @@
 
 import { TrashBin } from "@gravity-ui/icons";
 import { AlertDialog, Button } from "@heroui/react";
-import { redirect } from "next/navigation";
+import {useRouter} from "next/navigation";
+import toast from "react-hot-toast";
+
 
 export function DeleteAlert({facility}) {
-  const {_id, facilityName} = facility;
+  const { _id, facilityName } = facility;
+   const router = useRouter();
 
   const handleDelete = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/facility/${_id}`, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/facility/${_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
+        // credentials: "include",
       },
-      // credentials: "include",
-    });
+    );
 
     const data = await res.json();
-    redirect("/manage-facilities");
+    if (res.ok) {
+      toast.success("Deleted Successfully");
+      router.push("/manage-facilities");
+    } else {
+      toast.error("Delete Failed");
+    }
+
     console.log(data);
   };
+
   return (
     <AlertDialog>
       <Button
