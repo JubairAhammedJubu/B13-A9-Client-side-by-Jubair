@@ -2,19 +2,26 @@
 
 import {useEffect, useState} from "react";
 import FacilityCard from "@/components/FacilityCard";
+import Loading from "@/components/Loading";
 
 const FacilityPage = () => {
   const [facilities, setFacilities] = useState([]);
   const [search, setSearch] = useState("");
   const [type, setType] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/facility?search=${search}&type=${type}`,
       );
+
       const data = await res.json();
       setFacilities(data);
+
+      setLoading(false);
     };
 
     fetchData();
@@ -35,7 +42,7 @@ const FacilityPage = () => {
         />
 
         <select
-          className="border-gray-300 border p-2 rounded-2xl"
+          className="border border-gray-300 p-2 rounded-2xl"
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
@@ -63,12 +70,17 @@ const FacilityPage = () => {
         </select>
       </div>
 
-      {/* CARDS */}
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
-        {facilities.map((facility) => (
-          <FacilityCard key={facility._id} facility={facility} />
-        ))}
-      </div>
+      {/* LOADING */}
+      {loading ? (
+        <Loading />
+      ) : (
+        /* CARDS */
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+          {facilities.map((facility) => (
+            <FacilityCard key={facility._id} facility={facility} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
