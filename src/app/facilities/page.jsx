@@ -29,13 +29,13 @@ const FacilityPage = () => {
         <input
           type="text"
           placeholder="Search by name..."
-          className="border border-gray-300 p-2 rounded-2xl w-full "
+          className="border border-gray-300 p-2 rounded-2xl w-full"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
 
         <select
-          className=" border-gray-300 border p-2 rounded-2xl "
+          className="border-gray-300 border p-2 rounded-2xl"
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
