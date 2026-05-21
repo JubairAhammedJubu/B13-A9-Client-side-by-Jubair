@@ -39,7 +39,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
@@ -98,8 +98,8 @@ const Navbar = () => {
 
                 {/* PROFILE DROPDOWN */}
                 {profileOpen && (
-                  <div className="absolute right-0 mt-3 w-52 bg-white border rounded-xl shadow-lg overflow-hidden">
-                    <div className="px-4 py-3 border-b">
+                  <div className="absolute right-0 mt-3 w-52 bg-white border border-gray-300 rounded-xl shadow-lg overflow-hidden">
+                    <div className="px-4 py-3 shadow-sm">
                       <p className="text-sm font-semibold">{user.name}</p>
                       <p className="text-xs text-gray-500 truncate">
                         {user.email}
@@ -140,7 +140,7 @@ const Navbar = () => {
 
             {/* MOBILE MENU BUTTON */}
             <button
-              className="md:hidden p-2 rounded-md border"
+              className="md:hidden p-2 rounded-md border border-gray-300"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               ☰
@@ -158,10 +158,30 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href="/destinations"
+              href="/facilities"
               className="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded"
             >
               All Facilities
+            </Link>
+            <Link
+              href="/my-bookings"
+              className="block px-2 py-2 text-sm hover:bg-gray-100"
+            >
+              My Bookings
+            </Link>
+
+            <Link
+              href="/add-facility"
+              className="block px-2 py-2 text-sm hover:bg-gray-100"
+            >
+              Add Facility
+            </Link>
+
+            <Link
+              href="/manage-facilities"
+              className="block px-2 py-2 text-sm hover:bg-gray-100"
+            >
+              Manage Facilities
             </Link>
           </div>
         )}

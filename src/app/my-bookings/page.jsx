@@ -41,7 +41,7 @@ const MyBookingPage = async () => {
         {bookings.map((booking) => (
           <div
             key={booking._id}
-            className="group bg-white border rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all"
+            className="group bg-white border border-gray-300 rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all"
           >
             {/* Facility Name */}
             <h2 className="text-xl font-bold group-hover:text-cyan-600 transition">

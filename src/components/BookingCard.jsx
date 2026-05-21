@@ -74,6 +74,7 @@ export default function BookingCard({ facility }) {
 
       if (res.ok) {
         toast.success("Booking successful!");
+        window.location.reload();
       } else {
         toast.error(data?.message || "Booking failed");
       }

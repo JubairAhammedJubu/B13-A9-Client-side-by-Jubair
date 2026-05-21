@@ -25,17 +25,17 @@ const FacilityPage = () => {
       <h1 className="text-2xl font-bold mb-4">All Facilities</h1>
 
       {/* SEARCH + FILTER */}
-      <div className="w-3xl mx-auto flex gap-4 mb-6">
+      <div className="md:w-3xl mx-auto flex gap-4 mb-6">
         <input
           type="text"
           placeholder="Search by name..."
-          className="border p-2 rounded-2xl w-full "
+          className="border border-gray-300 p-2 rounded-2xl w-full "
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
 
         <select
-          className="border p-2 rounded-2xl "
+          className=" border-gray-300 border p-2 rounded-2xl "
           value={type}
           onChange={(e) => setType(e.target.value)}
         >

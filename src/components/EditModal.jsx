@@ -109,15 +109,15 @@ export function EditModal({facility}) {
 
                     {/* Facility - Updated Select Component */}
                     <div>
+                      <Label>Facility Type</Label>
                       <Select
                         defaultValue={facility_type}
                         name="facility_type"
                         isRequired
-                        className="w-full"
+                        className="w-full border-hidden p-0"
                         placeholder="Select Facility Type"
                       >
-                        <Label>Facility Type</Label>
-                        <Select.Trigger className="rounded-2xl">
+                        <Select.Trigger className="rounded-2xl w-full m-0">
                           <Select.Value />
                           <Select.Indicator />
                         </Select.Trigger>
