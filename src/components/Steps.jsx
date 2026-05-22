@@ -1,12 +1,9 @@
 import Image from "next/image";
-// import User from "@/assets/user.png";
-// import Package from "@/assets/package.png";
-// import Rocket from "@/assets/rocket.png";
 
 const Steps = () => {
   return (
     <div className="bg-gray-50 md:py-30 py-10">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center md:px-4">
         <h2 className="text-2xl md:text-[48px] font-bold text-gray-800 mb-3">
           Get Started In 3 Steps
         </h2>
@@ -16,7 +13,7 @@ const Steps = () => {
 
         <div className="grid md:grid-cols-3 gap-8 md:px-0 px-4">
           <div className="bg-white rounded-2xl shadow-sm px-8 py-10 relative flex flex-col">
-            <div className="absolute top-4 right-4 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white text-sm font-bold px-3 py-2.5 rounded-full">
+            <div className="absolute top-4 right-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold px-3 py-2.5 rounded-full">
               01
             </div>
 
@@ -39,7 +36,7 @@ const Steps = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm px-8 py-10 relative flex flex-col">
-            <span className="absolute top-4 right-4 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white text-sm font-bold px-3 py-2.5 rounded-full">
+            <span className="absolute top-4 right-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold px-3 py-2.5 rounded-full">
               02
             </span>
 
@@ -61,7 +58,7 @@ const Steps = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm px-8 py-10 relative flex flex-col">
-            <span className="absolute top-4 right-4 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white text-sm font-bold px-3 py-2.5 rounded-full">
+            <span className="absolute top-4 right-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold px-3 py-2.5 rounded-full">
               03
             </span>
 

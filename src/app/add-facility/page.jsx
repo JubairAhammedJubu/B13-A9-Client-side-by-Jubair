@@ -63,12 +63,12 @@ const AddFacilityPage = () => {
   return (
     <div className="p-4 md:p-6 max-w-7xl mx-auto">
       {/* Header */}
-      <div className="bg-[#173c3d] p-4 md:p-5 text-center rounded-xl mb-4 md:mb-5">
+      <div className="bg-linear-to-r from-cyan-500 to-blue-600 p-4 md:p-5 text-center rounded-xl mb-4 md:mb-5">
         <h1 className="text-xl md:text-3xl font-black uppercase text-white">
           Add New Facility
         </h1>
 
-        <p className="text-gray-300 mt-2 mx-auto text-sm md:text-base">
+        <p className="text-gray-200 mt-2 mx-auto text-sm md:text-base">
           Create and manage your sports facility with all essential booking
           information for users.
         </p>
@@ -275,7 +275,7 @@ const AddFacilityPage = () => {
           <Button
             type="submit"
             variant="outline"
-            className="rounded-2xl w-full bg-cyan-500 text-white py-2 md:py-3"
+            className="rounded-2xl w-2xl bg-linear-to-r from-cyan-500 to-blue-600 text-white py-2 md:py-3"
           >
             Add Facility
           </Button>

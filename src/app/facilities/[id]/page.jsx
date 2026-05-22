@@ -4,6 +4,7 @@ import {Button} from "@heroui/react";
 import {headers} from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import { FaBasketballBall} from "react-icons/fa";
 import {FaRegCalendar, FaUsers} from "react-icons/fa6";
 import {FiExternalLink} from "react-icons/fi";
 import {LuMapPin} from "react-icons/lu";
@@ -62,7 +63,7 @@ const FacilityDetailsPage = async ({params}) => {
             </span>
 
             <span className="flex items-center gap-1">
-              <FaRegCalendar /> {facility_type}
+              <FaBasketballBall /> {facility_type}
             </span>
           </div>
         </div>

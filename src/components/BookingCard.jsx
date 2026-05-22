@@ -89,7 +89,9 @@ export default function BookingCard({ facility }) {
   return (
     <Modal>
       {/* Trigger Button */}
-      <Button className="w-full bg-cyan-500 text-white">Book Now</Button>
+      <Button className="w-full bg-linear-to-r from-cyan-500 to-blue-600 text-white">
+        Book Now
+      </Button>
 
       <Modal.Backdrop>
         <Modal.Container placement="auto">

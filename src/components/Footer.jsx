@@ -1,4 +1,7 @@
 import Image from "next/image";
+import {FaFacebook, FaInstagram, FaLinkedin} from "react-icons/fa";
+
+import {FaXTwitter} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -118,27 +121,33 @@ const Footer = () => {
               Social Links
             </h3>
 
-            <div className="flex space-x-3">
-              <Image
-                src="/assets/instagram.png"
-                alt="Instagram"
-                width={40}
-                height={40}
-              />
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full border border-[#457B9D] flex items-center justify-center hover:bg-[#E63946] hover:border-[#E63946] hover:scale-110 transition-all duration-300 text-[#A8DADC] hover:text-white"
+              >
+                <FaFacebook size={16} />
+              </a>
 
-              <Image
-                src="/assets/facebook.png"
-                alt="Facebook"
-                width={40}
-                height={40}
-              />
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full border border-[#457B9D] flex items-center justify-center hover:bg-[#E63946] hover:border-[#E63946] hover:scale-110 transition-all duration-300 text-[#A8DADC] hover:text-white"
+              >
+                <FaXTwitter size={16} />
+              </a>
 
-              <Image
-                src="/assets/twitter.png"
-                alt="Twitter"
-                width={40}
-                height={40}
-              />
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full border border-[#457B9D] flex items-center justify-center hover:bg-[#E63946] hover:border-[#E63946] hover:scale-110 transition-all duration-300 text-[#A8DADC] hover:text-white"
+              >
+                <FaInstagram size={16} />
+              </a>
             </div>
           </div>
         </div>

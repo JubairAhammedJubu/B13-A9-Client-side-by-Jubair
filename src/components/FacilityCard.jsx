@@ -66,7 +66,7 @@ const FacilityCard = ({facility}) => {
         <Link href={`/facilities/${_id}`}>
           <Button
             radius="full"
-            className="w-full mt-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-md hover:shadow-xl transition-all"
+            className="w-full mt-3 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-md hover:shadow-xl transition-all"
           >
             <FiExternalLink className="mr-2" />
             Book Now

@@ -7,7 +7,7 @@ const Featured = async () => {
   const facilities = await res.json();
   console.log(facilities);
   return (
-    <section className="relative py-20">
+    <section className="relative py-20 px-2">
       {/* Background Blur */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full -z-10" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full -z-10" />
@@ -43,7 +43,7 @@ const Featured = async () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-14">
           {facilities.map((facility) => (
             <div
               key={facility._id}

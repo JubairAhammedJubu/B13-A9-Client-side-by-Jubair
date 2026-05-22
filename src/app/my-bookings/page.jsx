@@ -37,11 +37,11 @@ const MyBookingPage = async () => {
     <div className="w-full max-w-7xl mx-auto px-5 py-10">
       <h1 className="text-3xl font-bold mb-8">My Bookings</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {bookings.map((booking) => (
           <div
             key={booking._id}
-            className="group bg-white border border-gray-300 rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all"
+            className="group bg-white border border-gray-300 bg-linear-to-r from-cyan-50 to-blue-50 rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all"
           >
             {/* Facility Name */}
             <h2 className="text-xl font-bold group-hover:text-cyan-600 transition">

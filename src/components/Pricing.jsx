@@ -58,8 +58,8 @@ const pricing = {
 
 const Pricing = () => {
   return (
-    <div className="py-20 md:py-30 bg-base-100 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="py-20 md:py-30 bg-base-100">
+      <div className="max-w-7xl mx-auto md:px-4">
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold">{pricing.title}</h2>
@@ -70,13 +70,13 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-stretch">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8  items-stretch">
           {pricing.plans.map((plan, index) => (
             <div
               key={index}
               className={`w-full flex-1 max-w-sm md:w-96 shadow-xl rounded-2xl relative ${
                 plan.name === "Pro"
-                  ? "text-white bg-gradient-to-br from-indigo-600 to-purple-600"
+                  ? "text-white bg-linear-to-r from-cyan-500 to-blue-600"
                   : "bg-white"
               }`}
             >
@@ -146,8 +146,8 @@ const Pricing = () => {
                   <button
                     className={`w-full py-3 rounded-full font-medium transition ${
                       plan.name === "Pro"
-                        ? "bg-white text-purple-600 hover:bg-gray-100"
-                        : "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                        ? "bg-white text-cyan-600 hover:bg-gray-100"
+                        : "bg-linear-to-r from-cyan-500 to-blue-600 text-white"
                     }`}
                   >
                     {plan.button.text}
