@@ -36,9 +36,17 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
+# 📸 Project Screenshot
+
+> Replace this image with your own project screenshot.
+
+![SportNest Screenshot](./public/screenshot.png)
+
+---
+
 # ✨ Key Features
 
-## Authentication
+##  🔐 Authentication
 
 * User Registration
 * User Login
@@ -49,7 +57,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## Facility Management
+##  🏟 Facility Management
 
 * Add New Facility
 * Update Facility
@@ -60,7 +68,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## Booking System
+##  📅 Booking System
 
 * Book Sports Facilities
 * Select Date
@@ -71,7 +79,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## User Dashboard
+##  👨‍💻 User Dashboard
 
 * My Bookings
 * Add Facility
@@ -81,7 +89,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## Search & Filter
+##  🔍 Search & Filter
 
 * Search by Facility Name
 * Filter by Sport Type
@@ -90,7 +98,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## Responsive Design
+##  📱 Responsive Design
 
 * Desktop
 * Tablet
@@ -98,7 +106,7 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-## Additional Features
+## ⭐ Additional Features
 
 * Loading Spinner
 * Custom 404 Page
@@ -158,25 +166,156 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 ---
 
-# 🎯 Assignment Requirements Covered
+# 📦 NPM Dependencies
 
-* Responsive Layout
-* Better Auth Authentication
-* Google Login
-* Private Routes
-* JWT with HTTPOnly Cookies
-* CRUD Operations
-* MongoDB Integration
-* Search & Filter
-* Dynamic Featured Facilities
-* Booking Management
-* Loading Spinner
-* Custom 404 Page
-* Toast Notifications
-* Image Upload
-* Protected APIs
-* Secure Environment Variables
-* Recruiter-Friendly UI
+## Client
+
+```json
+react
+react-router-dom
+axios
+tailwindcss
+daisyui
+react-hook-form
+react-icons
+react-hot-toast
+framer-motion
+firebase
+```
+
+## Server
+
+```json
+express
+mongodb
+cors
+dotenv
+jsonwebtoken
+cookie-parser
+better-auth
+```
+
+---
+
+# 💻 Run the Project Locally
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/sportnest-client.git
+git clone https://github.com/yourusername/sportnest-server.git
+```
+
+---
+
+## 2. Install Dependencies
+
+### Client
+
+```bash
+cd sportnest-client
+npm install
+```
+
+### Server
+
+```bash
+cd sportnest-server
+npm install
+```
+
+---
+
+## 3. Configure Environment Variables
+
+### Client (.env)
+
+```env
+VITE_API_URL=http://localhost:5000
+VITE_IMGBB_API_KEY=YOUR_IMGBB_KEY
+VITE_FIREBASE_API_KEY=YOUR_FIREBASE_KEY
+```
+
+### Server (.env)
+
+```env
+PORT=5000
+
+MONGODB_URI=YOUR_MONGODB_URI
+
+JWT_SECRET=YOUR_SECRET_KEY
+
+CLIENT_URL=http://localhost:5173
+```
+
+---
+
+## 4. Run Development Server
+
+### Backend
+
+```bash
+npm run dev
+```
+
+### Frontend
+
+```bash
+npm run dev
+```
+
+---
+
+## 5. Open in Browser
+
+```
+http://localhost:5173
+```
+
+---
+
+# 📊 Database Collections
+
+## Facilities
+
+```js
+{
+  name,
+  facility_type,
+  location,
+  price_per_hour,
+  capacity,
+  available_slots,
+  description,
+  owner_email,
+  booking_count
+}
+```
+
+## Bookings
+
+```js
+{
+  facility_id,
+  user_email,
+  booking_date,
+  time_slot,
+  hours,
+  total_price,
+  status
+}
+```
+
+---
+
+# 🔒 Security Features
+
+- JWT Authentication
+- HTTP-only Cookies
+- Protected Routes
+- Private API Middleware
+- Environment Variables
+- MongoDB Credential Protection
 
 ---
 
@@ -190,3 +329,5 @@ The project demonstrates a complete MERN Stack application with authentication, 
 * Facility Reviews & Ratings
 * Real-Time Slot Availability
 * Booking Analytics
+---
+## ⭐ If you like this project, consider giving it a star on GitHub!
