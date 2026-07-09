@@ -190,9 +190,3 @@ The project demonstrates a complete MERN Stack application with authentication, 
 * Facility Reviews & Ratings
 * Real-Time Slot Availability
 * Booking Analytics
-
----
-
-# 📄 License
-
-This project was developed for academic purposes as part of the **Programming Hero Assignment (Category: CAT_03)**.
