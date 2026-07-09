@@ -6,7 +6,7 @@ A modern full-stack **Sports Facility Booking Management System** built with the
 
 # 🌐 Live Website
 
-> **Live URL:** (https://b13-a9-client-side-by-jubair.vercel.app)
+> **Live URL:** https://b13-a9-client-side-by-jubair.vercel.app
 
 ---
 
@@ -14,12 +14,11 @@ A modern full-stack **Sports Facility Booking Management System** built with the
 
 ### Client Repository
 
-> [https://github.com/your-username/sportnest-client](https://github.com/your-username/sportnest-client)
+> https://github.com/JubairAhammedJubu/B13-A9-Client-side-by-Jubair
 
 ### Server Repository
 
-> [https://github.com/your-username/sportnest-server](https://github.com/your-username/sportnest-server)
-
+> https://github.com/JubairAhammedJubu/B13-A9-Server-side-by-Jubair
 ---
 
 # 🎯 Project Purpose
