@@ -38,8 +38,6 @@ The project demonstrates a complete MERN Stack application with authentication, 
 
 # 📸 Project Screenshot
 
-> Replace this image with your own project screenshot.
-
 ![SportNest Screenshot](./public/screenshot.png)
 
 ---
